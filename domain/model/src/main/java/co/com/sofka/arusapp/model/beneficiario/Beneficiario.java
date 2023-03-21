@@ -12,7 +12,7 @@ import java.util.Date;
 @Data
 @Builder(toBuilder = true)
 public class Beneficiario {
-    private int id;
+    private Integer idBeneficiario;
     private TipoCedula tipoCedula;
     private String cedula;
     private String nombres;

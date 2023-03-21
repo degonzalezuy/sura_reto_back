@@ -2,6 +2,7 @@ package co.com.sofka.arusapp.jpa.causante;
 
 import co.com.sofka.arusapp.model.asesor.Asesor;
 import co.com.sofka.arusapp.model.beneficiario.Beneficiario;
+import co.com.sofka.arusapp.model.genero.Genero;
 import co.com.sofka.arusapp.model.tipocedula.TipoCedula;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -39,7 +40,7 @@ public class CausanteDTO {
 
     @OneToOne(mappedBy = "genero", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
-    private int genero;
+    private Genero genero;
 
 
 }

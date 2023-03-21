@@ -8,6 +8,8 @@ import reactor.core.publisher.Mono;
 public interface GeneroRepository {
     Mono<Genero> saveGenero(Genero genero);
     Flux<Genero> findAll();
-    Mono<Genero>findById(int id);
+    Mono<Genero>findById(Integer id);
+
+    Mono<Genero>deleteGenero(Integer id);
 
 }

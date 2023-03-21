@@ -15,7 +15,7 @@ import java.util.Date;
 @Data
 @Builder(toBuilder = true)
 public class Causante{
-    private int id;
+    private Integer id;
     private TipoCedula tipoCedula;
     private String cedula;
     private String nombres;

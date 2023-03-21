@@ -3,6 +3,9 @@ package co.com.sofka.arusapp.jpa.mapper;
 import co.com.sofka.arusapp.jpa.causante.CausanteDTO;
 import co.com.sofka.arusapp.model.causante.Causante;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class CausanteMapper {
 
     public static CausanteDTO causanteToCausanteDTO(Causante causante){
@@ -31,6 +34,18 @@ public class CausanteMapper {
                 .genero(causanteDTO.getGenero())
                 .asesor(causanteDTO.getAsesor())
                 .build();
+    }
+
+    public static List<Causante> causantesDTOToCausantes(List<CausanteDTO> causantes){
+        return causantes.stream()
+                .map(CausanteMapper::causanteDTOToCausante)
+                .collect(Collectors.toList());
+    }
+
+    public static List<CausanteDTO> causantesToCausantesDTO(List<Causante> causantes){
+        return causantes.stream()
+                .map(CausanteMapper::causanteToCausanteDTO)
+                .collect(Collectors.toList());
     }
 }
 

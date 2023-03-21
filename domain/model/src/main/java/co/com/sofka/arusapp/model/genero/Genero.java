@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder(toBuilder = true)
 public class Genero {
-    private int id;
+    private Integer id;
     private String descripcion;
 }

@@ -6,8 +6,8 @@ import reactor.core.publisher.Mono;
 
 public interface CausanteRepository {
     Mono<Causante>saveCausante(Causante causante);
-    Flux<Causante> findAll();
-    Mono<Causante>findById(int id);
+    Flux<Causante> buscarCausantes();
+    Mono<Causante>buscarCausantePorId(int id);
 
     Mono<Boolean> verificarCausanteSBDCPC(String tipoIdentificacion, int identificacion);
 
